@@ -1,0 +1,30 @@
+# Numerous always-ignore extensions
+# ----------------------------------------------------------------------------------------------
+*.diff
+*.log
+*.swp
+*~
+.cache
+
+# Folders to ignore
+.hg
+.svn
+
+
+# OSX       taken from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# ----------------------------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
