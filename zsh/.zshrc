@@ -106,8 +106,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
 if [[ -f ~/.zsh_alias ]]; then
 	source ~/.zsh_alias
+fi
+
+
+if [[ -d ~/.zshrc.d ]]; then
+	for file in ~/.zshrc.d/*; do
+		source ${file}
+	done
 fi
 
 # direnv hook
@@ -118,3 +126,4 @@ export LC_ALL=en_US.UTF-8
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
