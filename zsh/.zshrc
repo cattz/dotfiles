@@ -76,6 +76,7 @@ plugins=(
 	git
 	virtualenv
 	aws
+	ssh-agent
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -107,11 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-if [[ -f ~/.zsh_alias ]]; then
-	source ~/.zsh_alias
-fi
-
-
 if [[ -d ~/.zshrc.d ]]; then
 	for file in ~/.zshrc.d/*; do
 		source ${file}
@@ -120,6 +116,7 @@ fi
 
 # direnv hook
 eval "$(direnv hook zsh)"
+eval $(ssh-agent)
 
 # Fix issue with locale
 export LC_ALL=en_US.UTF-8
