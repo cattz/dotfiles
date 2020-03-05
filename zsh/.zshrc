@@ -114,6 +114,8 @@ if [[ -d ~/.zshrc.d ]]; then
 	done
 fi
 
+unsetopt share_history
+
 # direnv hook
 eval "$(direnv hook zsh)"
 eval $(ssh-agent)
