@@ -20,8 +20,12 @@
 	dc = diff --cached
     logtree = log --graph --oneline --decorate --all
     unstage = reset --
+    exec = '!exec ' 
 	elsevier = config --local user.email x.davila@elsevier.com
 	awsrepo = !git remote add origin https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/ && git config --local credential.UseHttpPath true && git config --local credential.helper '!aws codecommit credential-helper $@'
+	hook-commit = !ln -s ~/Repos/xabier/git-local-hooks/commit-msg#Fail_commit_if_no_jira_key_present.sh .git/hooks/commit-msg
+	hook-prepare = !ln -s ~/Repos/xabier/git-local-hooks/prepare-commit-msg#Insert_jira_issue_from_branch.sh .git/hooks/prepare-commit-msg
+
 #[credential]
 #	helper = osxkeychain
 [credential]
@@ -36,10 +40,14 @@
 	required = true
 	clean = git-lfs clean %f
 [core]
-	excludesfile = /Users/xabier/.gitignore_global
+	excludesfile = /Users/davilax/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[init]
+	templateDir = /Users/davilax/.git-template
+[commit]
+	template = /Users/davilax/.stCommitMsg
