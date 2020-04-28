@@ -118,6 +118,7 @@ unsetopt share_history
 
 # direnv hook
 eval "$(direnv hook zsh)"
+
 eval $(ssh-agent)
 
 # Fix issue with locale

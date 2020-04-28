@@ -1,0 +1,135 @@
+[default]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 3600
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 14400
+aws_profile          = saml
+resource_id          = 
+subdomain            = 
+role_arn             = 
+
+[rp-test]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = rp-test
+resource_id          = 
+subdomain            = 
+role_arn             = arn:aws:iam::383869057090:role/ADFS-Developer
+
+[fs-np]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 14400
+aws_profile          = fs-np
+resource_id          = 
+subdomain            = 
+role_arn             = arn:aws:iam::804335263071:role/ADFS-Developer
+
+[fs-np-ADMIN]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = fs-np-ADMIN
+resource_id          = 
+subdomain            = 
+role_arn             = arn:aws:iam::804335263071:role/ADFS-EnterpriseAdmin
+
+[fs-PROD]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = fs-PROD
+resource_id          = 
+subdomain            = 
+role_arn             = arn:aws:iam::177350576146:role/ADFS-Developer
+
+[fs-PROD-ADMIN]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = fs-PROD-ADMIN
+resource_id          = 
+subdomain            = 
+role_arn             = arn:aws:iam::177350576146:role/ADFS-EnterpriseAdmin
+
+[fs-bkp]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = fs-bkp
+resource_id          = 
+subdomain            = 
+role_arn             = arn:aws:iam::327405595323:role/ADFS-EnterpriseAdmin
+
+[fs-bkp-ADMIN]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = fs-bkp-ADMIN
+resource_id          = 
+subdomain            = 
+role_arn             = arn:aws:iam::327405595323:role/ADFS-EnterpriseAdmin
+
+[esc-PROD]
+app_id               = 
+url                  = https://federation.reedelsevier.com/adfs/ls/IdpInitiatedSignOn.aspx
+username             = davilax@science.regn.net
+provider             = ADFS
+mfa                  = Auto
+skip_verify          = false
+timeout              = 0
+aws_urn              = urn:amazon:webservices
+aws_session_duration = 3600
+aws_profile          = esc-PROD
+resource_id          = 
+subdomain            = 
+role_arn             = arn:aws:iam::244289066138:role/ADFS-EnterpriseAdmin
+
