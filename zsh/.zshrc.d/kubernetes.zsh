@@ -1,7 +1,7 @@
 # kubernetes.zsh
 alias k=kubectl
-alias kn=kubens
-alias kc=kubectx
+alias ktx=kubectx
+alias kns=kubens
 
 source <(kubectl completion zsh)
 
