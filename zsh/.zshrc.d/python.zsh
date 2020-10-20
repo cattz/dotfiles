@@ -8,5 +8,9 @@ mkenv() {
 }
 
 workon() {
-    source "${WORKON_HOME}/${1}/bin/activate"
+	if [[ "$1" != "" ]]; then
+    	source "${WORKON_HOME}/${1}/bin/activate"
+    else
+    	ls "${WORKON_HOME}"
+    fi
 }
