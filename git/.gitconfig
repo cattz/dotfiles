@@ -48,9 +48,11 @@
     unstage = reset --
     exec = '!exec ' 
 	elsevier = config --local user.email x.davila@elsevier.com
+	xabier = config --local user.email davila.xabier@gmail.com
 	awsrepo = !git remote add origin https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/ && git config --local credential.UseHttpPath true && git config --local credential.helper '!aws codecommit credential-helper $@'
 	hook-commit = !ln -s ~/Repos/xabier/git-local-hooks/commit-msg#Fail_commit_if_no_jira_key_present.sh .git/hooks/commit-msg
 	hook-prepare = !ln -s ~/Repos/xabier/git-local-hooks/prepare-commit-msg#Insert_jira_issue_from_branch.sh .git/hooks/prepare-commit-msg
+	fix = commit --fixup=HEAD
 
 #[credential]
 #	helper = osxkeychain
@@ -62,9 +64,10 @@
 	smudge = git media smudge %f
 	required = true
 [filter "lfs"]
-	smudge = git-lfs smudge %f
+	smudge = git-lfs smudge -- %f
 	required = true
-	clean = git-lfs clean %f
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
 [core]
 	excludesfile = /Users/xabier davila/.gitignore_global
 [difftool "sourcetree"]
