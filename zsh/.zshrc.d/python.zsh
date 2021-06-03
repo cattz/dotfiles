@@ -11,6 +11,8 @@ workon() {
 	if [[ "$1" != "" ]]; then
     	source "${WORKON_HOME}/${1}/bin/activate"
     else
-    	ls "${WORKON_HOME}"
+    	source "${WORKON_HOME}/$(ls "${WORKON_HOME}" | fzf)/bin/activate" 
     fi
 }
+
+eval "$(pipenv --completion)"

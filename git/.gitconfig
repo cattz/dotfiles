@@ -47,12 +47,14 @@
     logtree = log --graph --oneline --decorate --all
     unstage = reset --
     exec = '!exec ' 
+    ria = rebase -i --autosquash
 	elsevier = config --local user.email x.davila@elsevier.com
 	xabier = config --local user.email davila.xabier@gmail.com
 	awsrepo = !git remote add origin https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/ && git config --local credential.UseHttpPath true && git config --local credential.helper '!aws codecommit credential-helper $@'
 	hook-commit = !ln -s ~/Repos/xabier/git-local-hooks/commit-msg#Fail_commit_if_no_jira_key_present.sh .git/hooks/commit-msg
 	hook-prepare = !ln -s ~/Repos/xabier/git-local-hooks/prepare-commit-msg#Insert_jira_issue_from_branch.sh .git/hooks/prepare-commit-msg
 	fix = commit --fixup=HEAD
+	autosquash = rebase -i --autosquash
 
 #[credential]
 #	helper = osxkeychain
@@ -89,3 +91,5 @@
 	
 [commit]
 	template = /Users/xabier davila/.stCommitMsg
+[init]
+	defaultBranch = main

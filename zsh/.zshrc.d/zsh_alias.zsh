@@ -9,6 +9,7 @@ alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Repos"
+
 alias g="git"
 
 alias genpass='openssl rand -base64 32'
@@ -18,7 +19,7 @@ alias sshc='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com || dig TXT +short o-o.myaddr.l.google.com @ns1.google.com'
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }' | sort -n"
 
